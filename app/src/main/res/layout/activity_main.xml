@@ -134,14 +134,53 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <View
-        android:id="@+id/rectangle_5"
+        android:id="@+id/recuadroInvitacion"
         android:layout_width="250dp"
         android:layout_height="240dp"
         android:layout_marginEnd="12dp"
         android:layout_marginBottom="210dp"
         android:background="@drawable/bordesend"
-        app:layout_constraintBottom_toBottomOf="@+id/cuadroinferior"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textInvitacion"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="5dp"
+        android:text="Te quiero invitar el dia: 00/00/00 a la hora: 12:00
+        Am en el lugar: Plaza de las americas Para el restaurante : BBC
+        ¿Aceptas?"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/recuadroInvitacion"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="@+id/recuadroInvitacion"
+        app:layout_constraintTop_toTopOf="@+id/recuadroInvitacion" />
+
+    <Button
+        android:id="@+id/aceptarInvitacion"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="#000000"
+        android:text="SI"
+        app:layout_constraintBottom_toBottomOf="@+id/recuadroInvitacion"
+        app:layout_constraintStart_toStartOf="@+id/textInvitacion" />
+
+
+    <Button
+        android:id="@+id/negarInvitacion"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="#000000"
+        android:text="NO"
+        app:layout_constraintBottom_toBottomOf="@+id/recuadroInvitacion"
+        app:layout_constraintEnd_toEndOf="@+id/textInvitacion" />
 
     <View
         android:id="@+id/editMensaje"
@@ -153,8 +192,19 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <EditText
+        android:id="@+id/textEditMensaje"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:hint="Enviar mensaje"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/editMensaje"
+        app:layout_constraintEnd_toEndOf="@+id/editMensaje"
+        app:layout_constraintStart_toStartOf="@+id/editMensaje"
+        app:layout_constraintTop_toTopOf="@+id/editMensaje" />
+
     <ImageView
-        android:id="@+id/iconsend"
+        android:id="@+id/iconSend"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_marginEnd="15dp"
@@ -172,7 +222,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
